@@ -1,16 +1,17 @@
 import "./Attribution.css";
+import { Link } from "react-router-dom";
 
 const Attribution = () => {
     return (
-        <div class="attribution">
+        <div className="attribution">
             Challenge by{" "}
-            <a
-                href="https://www.frontendmentor.io?ref=challenge"
+            <Link
+                to="https://www.frontendmentor.io?ref=challenge"
                 target="_blank"
             >
                 Frontend Mentor
-            </a>
-            . Coded by <a href="#">Leghemo Precious</a>.
+            </Link>
+            . Coded by <Link to="/">Leghemo Precious</Link>.
         </div>
     );
 };
