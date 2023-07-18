@@ -32,7 +32,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+### Mobile
+
+![](./Screenshot/Age-calculator-app-mobile.png)
+
+### Desktop
+
+![](./Screenshot/Age-calculator-app.png)
 
 ### Links
 

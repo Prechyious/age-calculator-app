@@ -1,0 +1,17 @@
+.result-container {
+    margin: 40px 0;
+    font-size: 50px;
+    font-weight: 800;
+    font-style: italic;
+    line-height: 3.5rem;
+}
+
+.result-container span {
+    color: var(--color-purple);
+}
+
+@media screen and (min-width: 1440px) {
+    .result-container {
+        margin: 30px 0;
+    }
+}

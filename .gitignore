@@ -25,14 +25,14 @@ yarn-error.log*
 
 # Avoid accidental upload of the Sketch and Figma design files
 #####################################################
-## Please do not remove lines 5 and 6 - thanks! 🙂 ##
+## Please do not remove lines 30 and 31 - thanks! 🙂 ##
 #####################################################
 *.sketch
 *.fig
 
 # Avoid accidental XD upload if you convert the design file
 ###############################################
-## Please do not remove line 12 - thanks! 🙂 ##
+## Please do not remove line 37 - thanks! 🙂 ##
 ###############################################
 *.xd
 

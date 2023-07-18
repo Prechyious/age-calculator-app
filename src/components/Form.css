@@ -1,0 +1,107 @@
+form {
+    padding: 20x 0;
+}
+
+form > div {
+    display: flex;
+    gap: 15px;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-smokey-grey);
+    line-height: 1.5rem;
+    letter-spacing: 2.5px;
+    font-size: 10px;
+}
+
+form input {
+    max-width: 85px;
+    font-size: 17px;
+    padding: 10px;
+    border: 1px solid var(--color-light-grey);
+    border-radius: 10px;
+    transition: border 300ms ease-in-out;
+    font-weight: 800;
+}
+
+form input:focus {
+    border: 1px solid var(--color-purple);
+    outline: none;
+}
+
+.error-container {
+    margin-top: 5px;
+}
+
+.error {
+    color: var(--color-light-red);
+    font-size: 10px;
+    letter-spacing: 0;
+    font-style: italic;
+    font-weight: 400;
+}
+
+.error-input label {
+    color: var(--color-light-red);
+}
+
+.error-input,
+.error-input input {
+    border-color: var(--color-light-red);
+}
+
+.btn-container {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-light-grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+button {
+    background-color: var(--color-purple);
+    border: none;
+    outline: none;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out;
+}
+
+button:hover {
+    background-color: var(--color-off-black);
+}
+
+button img {
+    height: 50px;
+    width: 50px;
+    padding: 12px;
+}
+
+@media screen and (min-width: 1440px) {
+    form {
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    form label {
+        align-items: start;
+        justify-content: flex-start;
+        font-size: 12px;
+    }
+
+    .btn-container {
+        width: 90%;
+        height: 1px;
+    }
+
+    button {
+        position: absolute;
+        right: 40px;
+        height: 60px;
+        width: 60px;
+    }
+}

@@ -1,0 +1,10 @@
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
