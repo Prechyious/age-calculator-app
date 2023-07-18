@@ -17,6 +17,12 @@ const Form = ({ handleDateChange }) => {
             err.push("This field is required");
         }
 
+        const isValidDate = () => {
+            const dateStr = `${year}-${month}-${day}`;
+            const parsedDate = parse(dateStr, "dd-MM-yyyy", new Date());
+            return isValid(parsedDate);
+        };
+
         if (!isValidDate()) {
             if (
                 !isValid(
@@ -39,13 +45,7 @@ const Form = ({ handleDateChange }) => {
             }
         }
         setErrors(err);
-    }, [day, month, year, errors]);
-
-    const isValidDate = () => {
-        const dateStr = `${year}-${month}-${day}`;
-        const parsedDate = parse(dateStr, "yyyy-MM-dd", new Date());
-        return isValid(parsedDate);
-    };
+    }, [day, month, year]);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -59,7 +59,7 @@ const Form = ({ handleDateChange }) => {
 
     return (
         <form
-            className={submitted && !isValidDate() ? "error-input" : "form"}
+            className={submitted && errors.length > 0 ? "error-input" : "form"}
             onSubmit={handleSubmit}
         >
             <div>
@@ -124,15 +124,11 @@ const Form = ({ handleDateChange }) => {
                     )}
                 </label>
             </div>
-            {submitted &&
-                day &&
-                month &&
-                year &&
-                errors.includes("Must be a valid date") && (
-                    <div className="error-container">
-                        <small className="error">Must be a valid date</small>
-                    </div>
-                )}
+            {submitted && errors.length > 0 && day && month && year && (
+                <div className="error-container">
+                    <small className="error">Must be a valid date</small>
+                </div>
+            )}
             <div className="btn-container">
                 <button>
                     <img src={arrow} alt="calculate" />
